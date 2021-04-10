@@ -3,7 +3,7 @@ import 'package:http/http.dart' as http;
 import 'dart:convert' as convert;
 import './models/super_hero_model.dart';
 
-String key = '3053';
+String key = '3053435988219043';
 String baseUrl = 'https://superheroapi.com/api/';
 
 Future<dynamic> getData() async {
@@ -14,6 +14,9 @@ Future<dynamic> getData() async {
   var jsonResponse;
   var response;
   var url;
+
+  // Api call
+
   for (int i = 1; i < 25; i++) {
     url = Uri.parse('https://superheroapi.com/api/$key/$i');
     response = await http.get(url);
